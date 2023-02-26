@@ -21,161 +21,99 @@ while [[ $# -gt 0 ]];do
   esac
 done
 
-echo -e "\033[31m Go Build  ${FILENAME}  ········· \033[0m"
+echo -e "\033[31m go build ${FILENAME}  ········· \033[0m"
 GOOS=android
 GOARCH=arm
-go build  -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}
-echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"
-cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
-
+GOOS=${GOOS} GOARCH=${GOARCH} go build -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}&& echo -e  "\033[34m `date "+%sY.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"&& cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
 GOOS=darwin
 GOARCH=386
-go build  -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}
-echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"
-cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
+GOOS=${GOOS} GOARCH=${GOARCH} go build -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}&& echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"&& cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
 GOOS=darwin
 GOARCH=amd64
-go build  -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}
-echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"
-cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
+GOOS=${GOOS} GOARCH=${GOARCH} go build -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}&& echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"&& cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
 GOOS=darwin
 GOARCH=arm
-go build  -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}
-echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"
-cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
+GOOS=${GOOS} GOARCH=${GOARCH} go build -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}&& echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"&& cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
 GOOS=darwin
 GOARCH=arm64
-go build  -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}
-echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"
-cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
+GOOS=${GOOS} GOARCH=${GOARCH} go build -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}&& echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"&& cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
 GOOS=dragonfly
 GOARCH=amd64
-go build  -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}
-echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"
-cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
+GOOS=${GOOS} GOARCH=${GOARCH} go build -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}&& echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"&& cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
 GOOS=freebsd
 GOARCH=386
-go build  -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}
-echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"
-cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
+GOOS=${GOOS} GOARCH=${GOARCH} go build -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}&& echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"&& cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
 GOOS=freebsd
 GOARCH=amd64
-go build  -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}
-echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"
-cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
+GOOS=${GOOS} GOARCH=${GOARCH} go build -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}&& echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"&& cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
 GOOS=freebsd
 GOARCH=arm
-go build  -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}
-echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"
-cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
+GOOS=${GOOS} GOARCH=${GOARCH} go build -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}&& echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"&& cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
 GOOS=linux
 GOARCH=386
-go build  -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}
-echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"
-cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
+GOOS=${GOOS} GOARCH=${GOARCH} go build -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}&& echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"&& cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
 GOOS=linux
 GOARCH=amd64
-go build  -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}
-echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"
-cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
+GOOS=${GOOS} GOARCH=${GOARCH} go build -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}&& echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"&& cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
 GOOS=linux
 GOARCH=arm
-go build  -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}
-echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"
-cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
+GOOS=${GOOS} GOARCH=${GOARCH} go build -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}&& echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"&& cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
 GOOS=linux
 GOARCH=arm64
-go build  -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}
-echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"
-cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
+GOOS=${GOOS} GOARCH=${GOARCH} go build -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}&& echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"&& cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
 GOOS=linux
 GOARCH=ppc64
-go build  -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}
-echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"
-cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
+GOOS=${GOOS} GOARCH=${GOARCH} go build -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}&& echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"&& cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
 GOOS=linux
 GOARCH=ppc64le
-go build  -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}
-echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"
-cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
+GOOS=${GOOS} GOARCH=${GOARCH} go build -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}&& echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"&& cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
 GOOS=linux
 GOARCH=mips
-go build  -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}
-echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"
-cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
+GOOS=${GOOS} GOARCH=${GOARCH} go build -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}&& echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"&& cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
 GOOS=linux
 GOARCH=mipsle
-go build  -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}
-echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"
-cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
+GOOS=${GOOS} GOARCH=${GOARCH} go build -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}&& echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"&& cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
 GOOS=linux
 GOARCH=mips64
-go build  -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}
-echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"
-cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
+GOOS=${GOOS} GOARCH=${GOARCH} go build -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}&& echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"&& cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
 GOOS=linux
 GOARCH=mips64le
-go build  -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}
-echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"
-cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
+GOOS=${GOOS} GOARCH=${GOARCH} go build -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}&& echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"&& cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
 GOOS=linux
 GOARCH=s390x
-go build  -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}
-echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"
-cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
+GOOS=${GOOS} GOARCH=${GOARCH} go build -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}&& echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"&& cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
 GOOS=netbsd
 GOARCH=386
-go build  -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}
-echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"
-cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
+GOOS=${GOOS} GOARCH=${GOARCH} go build -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}&& echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"&& cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
 GOOS=netbsd
 GOARCH=amd64
-go build  -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}
-echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"
-cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
+GOOS=${GOOS} GOARCH=${GOARCH} go build -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}&& echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"&& cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
 GOOS=netbsd
 GOARCH=arm
-go build  -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}
-echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"
-cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
+GOOS=${GOOS} GOARCH=${GOARCH} go build -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}&& echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"&& cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
 GOOS=openbsd
 GOARCH=386
-go build  -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}
-echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"
-cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
+GOOS=${GOOS} GOARCH=${GOARCH} go build -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}&& echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"&& cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
 GOOS=openbsd
 GOARCH=amd64
-go build  -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}
-echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"
-cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
+GOOS=${GOOS} GOARCH=${GOARCH} go build -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}&& echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"&& cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
 GOOS=openbsd
 GOARCH=arm
-go build  -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}
-echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"
-cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
+GOOS=${GOOS} GOARCH=${GOARCH} go build -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}&& echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"&& cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
 GOOS=plan9
 GOARCH=386
-go build  -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}
-echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"
-cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
+GOOS=${GOOS} GOARCH=${GOARCH} go build -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}&& echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"&& cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
 GOOS=plan9
 GOARCH=amd64
-go build  -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}
-echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"
-cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
+GOOS=${GOOS} GOARCH=${GOARCH} go build -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}&& echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"&& cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
 GOOS=solaris
 GOARCH=amd64
-go build  -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}
-echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"
-cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
+GOOS=${GOOS} GOARCH=${GOARCH} go build -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}  ${FILENAME}&& echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH} "build success!"&& cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}  && cd ../
 GOOS=windows
 GOARCH=386
-go build  -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}.exe  ${FILENAME}
-echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH}.exe "build success!"
-cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}.exe  && cd ../
+GOOS=${GOOS} GOARCH=${GOARCH} go build -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}.exe  ${FILENAME}&& echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH}.exe "build success!"&& cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}.exe  && cd ../
 GOOS=windows
 GOARCH=amd64
-go build  -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}.exe  ${FILENAME}
-echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH}.exe "build success!"
-cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}.exe  && cd ../
+GOOS=${GOOS} GOARCH=${GOARCH} go build -ldflags="-w -s" -o ./out/socks5_${GOOS}_${GOARCH}.exe  ${FILENAME}&& echo -e  "\033[34m `date "+%Y.%m.%d %H:%M:%S  "` \033[0m"  socks5_${GOOS}_${GOARCH}.exe "build success!"&& cd ./out/ && tar -czvf socks5_${GOOS}_${GOARCH}.tar.gz   socks5_${GOOS}_${GOARCH}.exe  && cd ../
+
 mkdir targz && mv ./out/*.tar.gz ./targz/
